@@ -7,17 +7,17 @@
     },
     "auto": {
         "Include": [
-            "Include/CloseAllNetworkPeers/CloseAllNetworkPeersRequestBus.h",
-            "Include/CloseAllNetworkPeers/ShutdownApplication.h"
+            "Include/CloseAllNetworkPeersGem/CloseAllNetworkPeersGemRequestBus.h",
+            "Include/CloseAllNetworkPeersGem/ShutdownApplication.h"
         ],
         "Source": [
-            "Source/CloseAllNetworkPeersModule.cpp",
+            "Source/CloseAllNetworkPeersGemModule.cpp",
             "Source/ConsoleCommandCVars.cpp",
             "Source/ConsoleCommandCVars.h",
             "Source/CloseNetworkPeersComponent.cpp",
             "Source/CloseNetworkPeersComponent.h",
-            "Source/CloseAllNetworkPeersSystemComponent.cpp",
-            "Source/CloseAllNetworkPeersSystemComponent.h",
+            "Source/CloseAllNetworkPeersGemSystemComponent.cpp",
+            "Source/CloseAllNetworkPeersGemSystemComponent.h",
             "Source/ShutdownApplication.cpp"
         ]
     }

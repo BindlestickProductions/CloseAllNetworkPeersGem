@@ -1,10 +1,10 @@
 #include "StdAfx.h"
 #include "ConsoleCommandCVars.h"
 #include <ISystem.h>
-#include <CloseAllNetworkPeers/CloseAllNetworkPeersRequestBus.h>
-#include <CloseAllNetworkPeers/ShutdownApplication.h>
+#include <CloseAllNetworkPeersGem/CloseAllNetworkPeersGemRequestBus.h>
+#include <CloseAllNetworkPeersGem/ShutdownApplication.h>
 
-using namespace CloseAllNetworkPeers;
+using namespace CloseAllNetworkPeersGem;
 
 void ConsoleCommandCVars::RegisterCVars()
 {
@@ -25,10 +25,10 @@ void ConsoleCommandCVars::UnregisterCVars()
 
 void ConsoleCommandCVars::CloseAll(IConsoleCmdArgs* /*args*/)
 {
-    if (CloseAllNetworkPeersRequestBus::FindFirstHandler())
+    if (CloseAllNetworkPeersGemRequestBus::FindFirstHandler())
     {
-        EBUS_EVENT(CloseAllNetworkPeersRequestBus,
-            CloseAllNetworkPeers);
+        EBUS_EVENT(CloseAllNetworkPeersGemRequestBus,
+            CloseAllNetworkPeersGem);
     }
     else
     {

@@ -1,16 +1,16 @@
 #include "StdAfx.h"
 #include <AzCore/Serialization/EditContext.h>
-#include "CloseAllNetworkPeersSystemComponent.h"
+#include "CloseAllNetworkPeersGemSystemComponent.h"
 #include <INetwork.h>
 #include <AzFramework/Network/NetBindingComponent.h>
 #include <CloseNetworkPeersComponent.h>
-#include <CloseAllNetworkPeers/ShutdownApplication.h>
+#include <CloseAllNetworkPeersGem/ShutdownApplication.h>
 
 using namespace AZ;
 using namespace AzFramework;
 using namespace GridMate;
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
     void CloseAllPeersSystemComponent::Reflect(ReflectContext* c)
     {
@@ -57,9 +57,9 @@ namespace CloseAllNetworkPeers
         (void)dependent;
     }
 
-    void CloseAllPeersSystemComponent::CloseAllNetworkPeers()
+    void CloseAllPeersSystemComponent::CloseAllNetworkPeersGem()
     {
-        AZ_Printf("Gem", "CloseAllNetworkPeers called");
+        AZ_Printf("Gem", "CloseAllNetworkPeersGem called");
 
         if (CloseAllRequestBus::FindFirstHandler())
         {
@@ -73,14 +73,14 @@ namespace CloseAllNetworkPeers
 
     void CloseAllPeersSystemComponent::Activate()
     {
-        CloseAllNetworkPeersRequestBus::Handler::BusConnect();
+        CloseAllNetworkPeersGemRequestBus::Handler::BusConnect();
         GameEntityContextEventBus::Handler::BusConnect();
         CrySystemEventBus::Handler::BusConnect();
     }
 
     void CloseAllPeersSystemComponent::Deactivate()
     {
-        CloseAllNetworkPeersRequestBus::Handler::BusDisconnect();
+        CloseAllNetworkPeersGemRequestBus::Handler::BusDisconnect();
         GameEntityContextEventBus::Handler::BusDisconnect();
         CrySystemEventBus::Handler::BusDisconnect();
     }

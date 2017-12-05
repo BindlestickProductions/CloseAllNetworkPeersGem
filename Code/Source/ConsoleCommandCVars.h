@@ -2,7 +2,7 @@
 
 #include <IConsole.h>
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
     class ConsoleCommandCVars
     {
@@ -13,6 +13,6 @@ namespace CloseAllNetworkPeers
         static void CloseAll(IConsoleCmdArgs* args);
 
     private:
-        const std::string m_commandName = "closeallnetworkpeers";
+        const std::string m_commandName = "closeallnetworkpeersgem";
     };
 }

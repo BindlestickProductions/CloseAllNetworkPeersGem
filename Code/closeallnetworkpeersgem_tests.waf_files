@@ -1,7 +1,7 @@
 {
     "auto": {
         "Tests": [
-            "Tests/CloseAllNetworkPeersTest.cpp"
+            "Tests/CloseAllNetworkPeersGemTest.cpp"
         ]
     }
 }

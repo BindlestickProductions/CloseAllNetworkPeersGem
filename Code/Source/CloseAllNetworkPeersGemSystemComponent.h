@@ -1,16 +1,16 @@
 #pragma once
 #include <AzCore/Component/Component.h>
-#include <CloseAllNetworkPeers/CloseAllNetworkPeersRequestBus.h>
+#include <CloseAllNetworkPeersGem/CloseAllNetworkPeersGemRequestBus.h>
 #include <AzCore/Component/EntityBus.h>
 #include <AzFramework/Entity/GameEntityContextBus.h>
 #include <GridMate/Session/Session.h>
 #include <CrySystemBus.h>
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
     class CloseAllPeersSystemComponent
         : public AZ::Component
-        , protected CloseAllNetworkPeersRequestBus::Handler
+        , protected CloseAllNetworkPeersGemRequestBus::Handler
         , public AZ::EntityBus::MultiHandler
         , AzFramework::GameEntityContextEventBus::Handler
         , public GridMate::SessionEventBus::Handler
@@ -32,8 +32,8 @@ namespace CloseAllNetworkPeers
             AZ::ComponentDescriptor::DependencyArrayType&);
 
     protected:
-        // CloseAllNetworkPeersRequestBus interface implementation
-        void CloseAllNetworkPeers() override;
+        // CloseAllNetworkPeersGemRequestBus interface implementation
+        void CloseAllNetworkPeersGem() override;
 
         // AZ::Component interface implementation
         void Activate() override;

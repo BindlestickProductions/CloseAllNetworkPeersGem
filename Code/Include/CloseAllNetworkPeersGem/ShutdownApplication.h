@@ -1,6 +1,6 @@
 #pragma once
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
     void ShutdownApplication();
 }

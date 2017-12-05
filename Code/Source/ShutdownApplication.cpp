@@ -1,9 +1,9 @@
 #include "StdAfx.h"
-#include <CloseAllNetworkPeers/ShutdownApplication.h>
+#include <CloseAllNetworkPeersGem/ShutdownApplication.h>
 #include <ISystem.h>
 #include <IConsole.h>
 
-void CloseAllNetworkPeers::ShutdownApplication()
+void CloseAllNetworkPeersGem::ShutdownApplication()
 {
     ISystem* system = nullptr;
     EBUS_EVENT_RESULT(system, CrySystemRequestBus, GetCrySystem);

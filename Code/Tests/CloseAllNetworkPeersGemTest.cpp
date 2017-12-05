@@ -3,7 +3,7 @@
 
 #include <AzTest/AzTest.h>
 
-class CloseAllNetworkPeersTest
+class CloseAllNetworkPeersGemTest
     : public ::testing::Test
 {
 protected:
@@ -18,7 +18,7 @@ protected:
     }
 };
 
-TEST_F(CloseAllNetworkPeersTest, ExampleTest)
+TEST_F(CloseAllNetworkPeersGemTest, ExampleTest)
 {
     ASSERT_TRUE(true);
 }

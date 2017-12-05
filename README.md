@@ -9,7 +9,7 @@ Would it not be nice to have a console command that would close all of them rega
 
 Now you can:
 
-> closeallnetworkpeers
+> closeallnetworkpeersgem
 
 # Notes
 Works with Lumberyard 1.11

@@ -1,13 +1,13 @@
 #pragma once
 #include <AzCore/EBus/EBus.h>
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
-    class CloseAllNetworkPeersRequests
+    class CloseAllNetworkPeersGemRequests
         : public AZ::EBusTraits
     {
     public:
-        virtual ~CloseAllNetworkPeersRequests() = default;
+        virtual ~CloseAllNetworkPeersGemRequests() = default;
 
         // EBusTraits overrides
         static const AZ::EBusHandlerPolicy HandlerPolicy =
@@ -15,8 +15,8 @@ namespace CloseAllNetworkPeers
         static const AZ::EBusAddressPolicy AddressPolicy =
             AZ::EBusAddressPolicy::Single;
 
-        virtual void CloseAllNetworkPeers() = 0;
+        virtual void CloseAllNetworkPeersGem() = 0;
     };
-    using CloseAllNetworkPeersRequestBus =
-        AZ::EBus<CloseAllNetworkPeersRequests>;
-} // namespace CloseAllNetworkPeers
+    using CloseAllNetworkPeersGemRequestBus =
+        AZ::EBus<CloseAllNetworkPeersGemRequests>;
+} // namespace CloseAllNetworkPeersGem

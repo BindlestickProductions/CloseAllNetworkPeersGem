@@ -3,7 +3,7 @@
 #include <AzFramework/Network/NetBindable.h>
 #include <AzCore/Component/TickBus.h>
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
     class CloseAllRequestInterface
         : public AZ::EBusTraits

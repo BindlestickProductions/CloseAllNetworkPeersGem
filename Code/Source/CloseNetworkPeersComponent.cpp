@@ -2,11 +2,11 @@
 #include "CloseNetworkPeersComponent.h"
 #include <AzCore/Serialization/EditContext.h>
 #include <GridMate/Replica/ReplicaFunctions.h>
-#include <CloseAllNetworkPeers/ShutdownApplication.h>
+#include <CloseAllNetworkPeersGem/ShutdownApplication.h>
 
 
 using namespace AZ;
-using namespace CloseAllNetworkPeers;
+using namespace CloseAllNetworkPeersGem;
 using namespace GridMate;
 
 class CloseNetworkPeersComponent::Chunk

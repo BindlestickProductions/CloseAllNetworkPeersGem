@@ -1,24 +1,24 @@
 #include "StdAfx.h"
 #include <platform_impl.h>
 #include <AzCore/Memory/SystemAllocator.h>
-#include "CloseAllNetworkPeersSystemComponent.h"
+#include "CloseAllNetworkPeersGemSystemComponent.h"
 #include <IGem.h>
 #include <ConsoleCommandCVars.h>
 #include <CloseNetworkPeersComponent.h>
 
-namespace CloseAllNetworkPeers
+namespace CloseAllNetworkPeersGem
 {
-    class CloseAllNetworkPeersModule
+    class CloseAllNetworkPeersGemModule
         : public CryHooksModule
     {
     public:
-        AZ_RTTI(CloseAllNetworkPeersModule,
+        AZ_RTTI(CloseAllNetworkPeersGemModule,
             "{3318C61B-4F73-4B09-9D5E-2682A9B64BA3}",
             CryHooksModule);
-        AZ_CLASS_ALLOCATOR(CloseAllNetworkPeersModule,
+        AZ_CLASS_ALLOCATOR(CloseAllNetworkPeersGemModule,
             AZ::SystemAllocator, 0);
 
-        CloseAllNetworkPeersModule()
+        CloseAllNetworkPeersGemModule()
             : CryHooksModule()
         {
             m_descriptors.insert(m_descriptors.end(), {
@@ -64,5 +64,5 @@ namespace CloseAllNetworkPeers
 // The first parameter should be GemName_GemIdLower
 // The second should be the fully qualified name of the class
 AZ_DECLARE_MODULE_CLASS(
-    CloseAllNetworkPeers_2fe33254d36e4e7f9b0344a051833956,
-    CloseAllNetworkPeers::CloseAllNetworkPeersModule)
+    CloseAllNetworkPeersGem_2fe33254d36e4e7f9b0344a051833956,
+    CloseAllNetworkPeersGem::CloseAllNetworkPeersGemModule)
