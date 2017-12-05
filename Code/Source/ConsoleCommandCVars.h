@@ -13,6 +13,6 @@ namespace CloseAllNetworkPeersGem
         static void CloseAll(IConsoleCmdArgs* args);
 
     private:
-        const std::string m_commandName = "closeallnetworkpeersgem";
+        const std::string m_commandName = "closeallnetworkpeers";
     };
 }
